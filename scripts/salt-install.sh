@@ -6,6 +6,7 @@
 set -e -o pipefail -o errexit
 
 function install_with_apt() {
+  apt-get update
   apt-get install -y apt-transport-https
 
   apt-key add /tmp/repos/saltstack-gpg-key.pub
